@@ -1,0 +1,1 @@
+# Adm_statie_linux
