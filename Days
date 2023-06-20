@@ -1,0 +1,28 @@
+DAY 1
+Filmulete vizualizate complet:
+
+https://www.youtube.com/watch?v=EP-vKnhYyqQ   ---Smenu: Script The Perfect Terminal Interface
+
+
+https://www.youtube.com/watch?v=J-zwGEwVRA4&t=289s   ---A GUI? In BASH?!?
+
+
+https://www.youtube.com/watch?v=A3G-3hp88mo    ---the Linux File System explained in 1,233 seconds // Linux for Hackers // EP 2
+
+
+Filmulete vizualizate partial:
+
+https://www.youtube.com/watch?v=UCr04qIB7uc&t=1s    ---Linux System Administration Full Course 3:24:00
+
+
+Ce am realizat in ziua 1:
+-schematizarea cerintelor.
+-creare meniu interactiv folosind smenu.
+-crearea de fisiere de backup pentru un singur utilizator. Momentan daca vreau sa fac pentru mai multi utilizatori trebuie sa modific putin codul initial.
+
+
+TO DO:
+-sa fac sa mearga facut backup pentru mai multi utilizatori
+-sa fac sincronizarea(presupun ca va incerca sa verifice recursiv daca exista fisierele respective, iar daca nu le creeaza)
+
+DAY 2:
