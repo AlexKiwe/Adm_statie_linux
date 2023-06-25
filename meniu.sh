@@ -6,7 +6,7 @@ while true
 do
 
 # Options
-	options=("Configurare_back-upuri" "Sincronizare_intre_stații" "Cleanup_regulat" "Updates" "Exit")
+	options=("Configurare_back-upuri" "Stergere_cache" "Sincronizare_intre_stații" "Cleanup_regulat" "Updates" "Exit")
 
 # Menu
 	selected_option=$(printf "%s\n" "${options[@]}" | smenu -N "Selectați o opțiune:")
@@ -32,6 +32,11 @@ do
     			echo "Ai selectat opțiunea: Updates"
 			source /home/student/update.sh
     			;;
+		"Stergere_cache")
+			clear
+			rm -rf ~/.cache/*
+			echo "Cache-ul a fost sters cu succes!"
+			;;
 		"Exit")
 			clear
 			echo "Iesire din program"
