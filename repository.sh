@@ -27,17 +27,20 @@ file_ssh="$author_name.ssh"
 file_gnupg="$author_name.gnupg"
 
 
-cp ~/.config "$file_conf"
+cp -r ~/.config "$file_conf"
 cp ~/.bashrc "$file_bash"
 cp ~/.profile "$file_pr"
 cp ~/.bash_history "$file_bh"
 cp ~/.bash_logout "$file_bl"
-cp ~/.ssh "$file_ssh"
-cp ~/.gnupg "$file_gnupg"
+cp -r ~/.ssh "$file_ssh"
+cp -r ~/.gnupg "$file_gnupg"
 
 git init
 git add .
 git remote add origin https://github.com/AlexKiwe/BackupsRepo.git
 git commit -m "$commit_message"
 
-git push -u origin main
+
+git checkout -b main
+git fetch origin main
+git push --force -u origin main
