@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Utilizatorul=$(woami)
+Utilizatorul=$(whoami)
 
 # Utilizatorul alege optiunea pentru meniu
 read -p "Vrei sa ai meniu basic sau interactiv? [basic/interactiv] " optiune

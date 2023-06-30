@@ -21,13 +21,13 @@ backup_files() {
         "yes")
 		if [ $ok == 0 ]
 		then
-            	echo "Se face backup la întregul fișier: $selected_option"
-           	rsync -av --delete "$directory" "/home/student/backups"
-	   	echo "Backup-urile au fost configurate cu succes!"
+			echo "Se face backup la întregul fișier: $selected_option"
+        	   	rsync -av --delete "$directory" "/home/student/backups"
+	   		echo "Backup-urile au fost configurate cu succes!"
 		else
-                echo "Se face backup la întregul fișier: $directory/$selected_option"
-                rsync -av --delete "$directory/$selected_option" "/home/student/backups"
-                echo "Backup-urile au fost configurate cu succes!"
+                	echo "Se face backup la întregul fișier: $directory/$selected_option"
+                	rsync -av --delete "$directory/$selected_option" "/home/student/backups"
+                	echo "Backup-urile au fost configurate cu succes!"
 		fi
             ;;
         "no")

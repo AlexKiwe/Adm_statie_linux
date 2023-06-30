@@ -11,7 +11,7 @@ fi
 read -p "Cum se numeste utilizatorul pe care vreti sa il adaugati: " user
 
 # Verificam daca deja exista utilizatorul, daca exista in schimbam parola
-# Daca nu exista il vo crea
+# Daca nu exista il vom crea
 if id $user
 then
 	echo "Utilizatorul $user deja exista."
@@ -32,9 +32,13 @@ passwd $user
 
 # Ii instalam git si smenu pentru ca sunt necesare pentru rularea anumitor scripturi
 
+usermod -aG root "$user"
+usermod -aG sudo "$user"
 # sudo su - $user
 sudo apt-get install git
 sudo apt-get install smenu
+
+
 
 # Descarcam de pe github fisierele necesare
 if [ ! -d "repo" ]
