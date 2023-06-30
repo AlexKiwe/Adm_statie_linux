@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# Verificam daca scriptul este rulat cu privilegii de root, in caz contrar afisam un mesaj
 if [ "$EUID" -ne 0 ]
-  then echo "Acest script trebuie rulat cu privilegii de root"
-  exit
+then
+	echo "Acest script trebuie rulat cu privilegii de root"
+      	exit
 fi
+
 
 read -p "Cum se numeste utilizatorul pe care vreti sa il adaugati: " user
 
+# Verificam daca deja exista utilizatorul, daca exista in schimbam parola
+# Daca nu exista il vo crea
 if id $user
 then
 	echo "Utilizatorul $user deja exista."
@@ -24,8 +29,14 @@ useradd -m $user
 
 passwd $user
 
+
+# Ii instalam git si smenu pentru ca sunt necesare pentru rularea anumitor scripturi
+
+# sudo su - $user
 sudo apt-get install git
 sudo apt-get install smenu
+
+# Descarcam de pe github fisierele necesare
 if [ ! -d "repo" ]
 then
 	mkdir "repo"

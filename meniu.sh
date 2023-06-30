@@ -13,6 +13,8 @@ do
 # Menu
 	selected_option=$(printf "%s\n" "${options[@]}" | smenu -N "Selectați o opțiune:")
 
+# In functie de alegere se ruleaza un script ce reprezinta o functionalitate sau se afiseaza un mesaj de eroare
+# Am facut cate un script pentru fiecare cerinta pentru a lucra mai usor cu codul, iar in cazul unor erori sa nu se strice complet programul
 	case $selected_option in
 		"Configurare_back-upuri")
 			echo "$Utilizatorul a selectat optiunea configurare back-up" >> fisier_log

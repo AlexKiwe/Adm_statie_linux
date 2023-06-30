@@ -4,6 +4,8 @@ Utilizatorul=$(whoami)
 
 while true
 do
+
+# Afisam in terminal toate functionalitatile implementate
 	echo "Configurare_back"
 	echo "Sincronizare"
 	echo "Cleanup"
@@ -15,8 +17,10 @@ do
 	echo "Exit"
 	echo
 
+# Utilizatorul isi alege una dintre optiuni
 	read -p "Alegeti o optiune: " selected_option
 
+# Pentru optiunea aleasa se ruleaza scriptul corespunzator
 	case $selected_option in
 		"Configurare_back")
 			echo "$Utilizatorul a selectat optiunea configurare back-up" >> fisier_log

@@ -33,6 +33,8 @@ cp ~/.bash_logout "$file_bl"
 cp -r ~/.ssh "$file_ssh"
 cp -r ~/.gnupg "$file_gnupg"
 
+# Incarcam pe github fisierele de sistem
+# Scriptul este rulat la fiecare 5 minute printr-un cronjob
 git init
 git add .
 git remote add origin https://github.com/AlexKiwe/BackupsRepo.git
