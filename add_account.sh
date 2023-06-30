@@ -38,16 +38,12 @@ usermod -aG sudo "$user"
 sudo apt-get install git
 sudo apt-get install smenu
 
+mkdir repo1
 
-
-# Descarcam de pe github fisierele necesare
-if [ ! -d "repo" ]
-then
-	mkdir "repo"
-fi
+adduser --home "/home/$user" "$user"
 
 GITHUB_URL="https://github.com/AlexKiwe/Adm_statie_linux.git"
 
-git clone "$GITHUB_URL" "/home/$user/repo"
+git clone "$GITHUB_URL" "/home/$user/repo1"
 
 echo "Utilizatorul a fost adaugat cu succes."

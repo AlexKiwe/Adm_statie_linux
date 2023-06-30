@@ -20,25 +20,25 @@ do
 			echo "$Utilizatorul a selectat optiunea configurare back-up" >> fisier_log
 			clear
     			echo "Ai selectat opțiunea: Configurare back-upuri"
-    			source /home/$Utilizatorul/try2.sh
+    			source /home/$Utilizatorul/repo1/try2.sh
 			;;
 		"Sincronizare_intre_stații")
 			echo "$Utilizatorul a selectat optiunea sincronizare statii" >> fisier_log
 			clear
     			echo "Ai selectat opțiunea: Sincronizare între stații"
-			source /home/$Utilizatorul/sync.sh
+			source /home/$Utilizatorul/repo1/sync.sh
     			;;
 		"Cleanup_regulat")
 			echo "$Utilizatorul a selectat optiunea cleanup" >> fisier_log
 			clear
     			echo "Ai selectat opțiunea: Cleanup regulat"
-			source /home/$Utilizatorul/clean.sh
+			source /home/$Utilizatorul/repo1/clean.sh
     			;;
 		"Updates")
 			echo "$Utilizatorul a selectat optiunea update" >> fisier_log
 			clear
     			echo "Ai selectat opțiunea: Updates"
-			source /home/$Utilizatorul/update.sh
+			source /home/$Utilizatorul/repo1/update.sh
     			;;
 		"Stergere_cache")
 			echo "$Utilizatorul a selectat optiunea stergere cache" >> fisier_log
@@ -50,17 +50,17 @@ do
 			echo "$Utilizatorul a selectat optiunea save to git" >> fisier_log
 			clear
 			echo "Ai selectat optiunea: Save to git"
-			source /home/$Utilizatorul/repository.sh
+			source /home/$Utilizatorul/repo1/repository.sh
 			;;
 		"Add_user")
 			echo "$Utilizatorul a selectat optiunea add user" >> fisier_log
 			clear
-			sudo /home/$Utilizatorul/add_account.sh
+			sudo /home/$Utilizatorul/repo1/add_account.sh
 			;;
 		"Modify_user")
 			echo "$Utilizatorul a selectat optiunea modify user" >> fisier_log
 			clear
-			sudo /home/$Utilizatorul/change_account.sh
+			sudo /home/$Utilizatorul/repo1/change_account.sh
 			;;
 		"Exit")
 			clear
