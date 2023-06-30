@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd
+
 let ok=0
 
 backup_files() {

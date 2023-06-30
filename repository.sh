@@ -21,7 +21,6 @@ cd "$repository_dir"
 file_conf="$author_name.conf"
 file_bash="$author_name.bash"
 file_pr="$author_name.pr"
-file_bh="$author_name.bh"
 file_bl="$author_name.bl"
 file_ssh="$author_name.ssh"
 file_gnupg="$author_name.gnupg"
@@ -30,7 +29,6 @@ file_gnupg="$author_name.gnupg"
 cp -r ~/.config "$file_conf"
 cp ~/.bashrc "$file_bash"
 cp ~/.profile "$file_pr"
-cp ~/.bash_history "$file_bh"
 cp ~/.bash_logout "$file_bl"
 cp -r ~/.ssh "$file_ssh"
 cp -r ~/.gnupg "$file_gnupg"
@@ -43,4 +41,4 @@ git commit -m "$commit_message"
 
 git checkout -b main
 git fetch origin main
-git push --force -u origin main
+git push --force -u origin main 

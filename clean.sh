@@ -1,21 +1,23 @@
 #!/bin/bash
 
-fisiere=$(find /home/student/backups -type f -mtime +30)
+Utilizatorul=$(whoami)
 
-if [ $fisiere ]
+fisiere=$(find /home/$Utilizatorul/backups -type f -mtime +30)
+
+if [[ -n $fisiere ]]
 then
-echo "Fisiere gasite: $fisiere"
+	echo "Fisiere gasite: $fisiere"
 
-read -p "Vrei să ștergi fișierele ce nu au mai fost accesate de cel putin o luna? [y/n] " raspuns
+	read -p "Vrei să ștergi fișierele ce nu au mai fost accesate de cel putin o luna? [y/n] " raspuns
 
-if [ "$raspuns" == "y" ]; then
-    for fisier in $fisiere; do
-        rm "$fisier"
-        echo "Fișierul $fisier a fost șters."
-    done
+	if [ "$raspuns" == "y" ]; then
+	    for fisier in $fisiere; do
+		rm "$fisier"
+		echo "Fișierul $fisier a fost șters."
+	    done
+	else
+	    echo "Nu se vor șterge fișierele."
+	fi
 else
-    echo "Nu se vor șterge fișierele."
-fi
-else
-	echo "Nu exista fisiere neaccesate de cel putin o luna."
+		echo "Nu exista fisiere neaccesate de cel putin o luna."
 fi
